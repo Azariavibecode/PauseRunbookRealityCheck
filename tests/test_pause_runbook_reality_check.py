@@ -55,9 +55,15 @@ def mock_runbook(vm, name, status=200, bad_blob=False):
 
 
 def mock_contract(vm, address=ADDRESS, verified=True, abi=None, source_code=SOURCE_CODE):
+    identity_url = "https://eth.blockscout.com/api/v2/addresses/" + ADDRESS.lower()
+    vm.mock_web(identity_url.replace(".", r"\.") + "$", {"status": 200, "body": json.dumps({
+        "hash": address, "is_contract": True,
+    }).encode()})
+    if address.lower() != ADDRESS.lower():
+        return
     url = "https://eth.blockscout.com/api/v2/smart-contracts/" + ADDRESS.lower()
     vm.mock_web(url.replace(".", r"\.") + "$", {"status": 200, "body": json.dumps({
-        "address_hash": address, "is_verified": verified, "abi": ABI if abi is None else abi, "source_code": source_code,
+        "is_verified": verified, "abi": ABI if abi is None else abi, "source_code": source_code,
     }).encode()})
 
 

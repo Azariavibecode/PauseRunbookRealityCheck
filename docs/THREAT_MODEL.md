@@ -6,7 +6,7 @@
 | Mutable branch or digest assertion | Full commit, Git tree entry, blob SHA-1, raw length and recomputed SHA-256 are checked |
 | Evidence from another repository/path | Exact commit tree must contain the registered path once |
 | Fake explorer or deceptive origin | Contract constructs the fixed `https://eth.blockscout.com` endpoint |
-| Interface response belongs to another address | Response address must equal the drill address exactly |
+| Interface response belongs to another address | The independent Blockscout address endpoint must return the exact hash and `is_contract=true` before the verified-source endpoint is accepted |
 | Unverified or empty source | `is_verified=true`, non-empty bounded source and non-empty bounded ABI function inventory are mandatory |
 | Prompt injection in runbook/source | Both are labeled untrusted evidence; output schema and cross-field invariants are enforced in code |
 | Model invents a positive certificate | `RUNBOOK_EXECUTABLE` requires five exact true booleans and `FULL_ALIGNMENT` |

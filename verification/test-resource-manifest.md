@@ -29,7 +29,7 @@
 - authority: Ethereum Blockscout smart-contract API
 - canonical origin: `https://eth.blockscout.com`
 - object binding: `chain_id=1 + exact contract address`
-- required facts: response address match, `is_verified=true`, non-empty bounded ABI functions and verified source
+- required facts: address endpoint exact hash and `is_contract=true`, smart-contract endpoint `is_verified=true`, non-empty bounded ABI functions and verified source
 - recorded commitments: normalized ABI SHA-256 and source SHA-256
 - boundary: does not prove current roles, storage, call success or production readiness
 

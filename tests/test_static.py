@@ -6,12 +6,12 @@ SOURCE = (Path(__file__).parents[1] / "contracts/PauseRunbookRealityCheck.py").r
 
 def test_runtime_and_authorities_are_pinned():
     assert SOURCE.startswith("# v0.2.16")
-    for item in ["https://api.github.com/repos/", "https://raw.githubusercontent.com/", "https://eth.blockscout.com/api/v2/smart-contracts/"]:
+    for item in ["https://api.github.com/repos/", "https://raw.githubusercontent.com/", "https://eth.blockscout.com/api/v2/addresses/", "https://eth.blockscout.com/api/v2/smart-contracts/"]:
         assert item in SOURCE
 
 
 def test_fetched_bytes_and_runtime_observation_are_bound():
-    for item in ["_blob_sha1(raw.body)", "hashlib.sha256(raw.body)", 'observed_address != address', 'item.get("is_verified") is not True', "source_digest", "abi_digest"]:
+    for item in ["_blob_sha1(raw.body)", "hashlib.sha256(raw.body)", 'observed_address != address', 'identity.get("is_contract") is not True', 'item.get("is_verified") is not True', "source_digest", "abi_digest"]:
         assert item in SOURCE
 
 

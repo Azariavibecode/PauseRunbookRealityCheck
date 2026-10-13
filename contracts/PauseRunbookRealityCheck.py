@@ -188,14 +188,21 @@ class Contract(gl.Contract):
         def acquire() -> str:
             failure = json.dumps({"abi": [], "abi_digest": "", "source": "", "source_digest": "", "status": "SOURCE_UNVERIFIED"}, sort_keys=True, separators=(",", ":"))
             try:
+                identity_response = gl.nondet.web.get("https://eth.blockscout.com/api/v2/addresses/" + address)
+                if identity_response.status != 200 or not (0 < len(identity_response.body) <= 24000):
+                    return failure
+                identity = json.loads(identity_response.body.decode("utf-8"))
+                observed_address = str(identity.get("hash", "")).lower()
+                if observed_address != address or identity.get("is_contract") is not True:
+                    return failure
+
                 response = gl.nondet.web.get("https://eth.blockscout.com/api/v2/smart-contracts/" + address)
                 if response.status != 200 or not (0 < len(response.body) <= 90000):
                     return failure
                 item = json.loads(response.body.decode("utf-8"))
-                observed_address = str(item.get("address_hash", item.get("address", ""))).lower()
                 abi = item.get("abi")
                 source = str(item.get("source_code", ""))
-                if observed_address != address or item.get("is_verified") is not True or not isinstance(abi, list):
+                if item.get("is_verified") is not True or not isinstance(abi, list):
                     return failure
                 if not (0 < len(source) <= 36000) or len(abi) > 160:
                     return failure
