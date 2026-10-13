@@ -1,0 +1,324 @@
+{
+  "generated_at": "2026-10-13T02:04:07.911Z",
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "contract": "0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "contract_explorer_url": "https://explorer-studio.genlayer.com/address/0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "target_contract": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "wallets": {
+    "auxiliary_a": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+    "auxiliary_b": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5"
+  },
+  "source": {
+    "owner": "Azariavibecode",
+    "repo": "PauseRunbookRealityCheck",
+    "commit": "03865b5653d2a519747d6773dd06b152fe0a0c4d",
+    "path": "/fixtures/runbook/usdt-live.md",
+    "digest": "de5bac600bcdb72ae0577130011071d6569b77073ce4291323352609943d6185",
+    "marker": "## DANGEROUS"
+  },
+  "before": {
+    "certified_count": 1,
+    "drill_count": 3,
+    "hazard_count": 2,
+    "inconclusive_count": 0
+  },
+  "after": {
+    "certified_count": 1,
+    "drill_count": 4,
+    "hazard_count": 3,
+    "inconclusive_count": 0
+  },
+  "runbook_observation": {
+    "digest": "d816d0f624c00f9d12bd494b0f6269c9a95ebc46d7a86a88b91f4bec34da002d",
+    "section": "## DANGEROUS\nFor Ethereum deployment 0xdAC17F958D2ee523a2206206994597C13D831ec7, the authorized owner calls pause() with no arguments and later unpause() with no arguments to recover. It is safe to assume pause freezes every operation, including approve, issue, redeem, ownership transfer and all views; no administrative operation can change state while paused.",
+    "status": "VERIFIED"
+  },
+  "contract_observation": {
+    "abi": [
+      {
+        "inputs": [],
+        "name": "name",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "deprecate",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address",
+          "uint256"
+        ],
+        "name": "approve",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "deprecated",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "addBlackList",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "address",
+          "uint256"
+        ],
+        "name": "transferFrom",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "upgradedAddress",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "balances",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "decimals",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "maximumFee",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "_totalSupply",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "unpause",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "getBlackListStatus",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "address"
+        ],
+        "name": "allowed",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "paused",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "balanceOf",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "pause",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "getOwner",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "uint256"
+        ],
+        "name": "transfer",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "uint256",
+          "uint256"
+        ],
+        "name": "setParams",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "uint256"
+        ],
+        "name": "issue",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "uint256"
+        ],
+        "name": "redeem",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address",
+          "address"
+        ],
+        "name": "allowance",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "basisPointsRate",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "isBlackListed",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "removeBlackList",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_UINT",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "transferOwnership",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "destroyBlackFunds",
+        "state_mutability": "nonpayable"
+      }
+    ],
+    "abi_digest": "f06190e058321391512a817c82597b63fcbf5ab23165dd158b8394514c7c8b96",
+    "source": "[omitted 14888 chars]",
+    "source_digest": "36bf0b5747dfe7f79a03c9bc09af63e93e352d3c61199fbf025fd2c962b485f8",
+    "status": "VERIFIED"
+  },
+  "drill": {
+    "chain_id": 1,
+    "contract_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+    "drill_id": 3,
+    "findings": {
+      "drill_id": 3,
+      "hazard_free": false,
+      "method_exists": true,
+      "parameters_match": true,
+      "reason_code": "UNSAFE_SCOPE",
+      "recovery_described": true,
+      "scope_supported": false,
+      "verdict": "RUNBOOK_DANGEROUS"
+    },
+    "project": "public-emergency-drill",
+    "reason_code": "UNSAFE_SCOPE",
+    "runbook_source": {
+      "commit": "03865b5653d2a519747d6773dd06b152fe0a0c4d",
+      "digest": "de5bac600bcdb72ae0577130011071d6569b77073ce4291323352609943d6185",
+      "marker": "## DANGEROUS",
+      "owner": "Azariavibecode",
+      "path": "/fixtures/runbook/usdt-live.md",
+      "repo": "PauseRunbookRealityCheck"
+    },
+    "state": "HAZARD_RECORDED",
+    "verdict": "RUNBOOK_DANGEROUS"
+  },
+  "transactions": [
+    {
+      "label": "create_drill",
+      "hash": "0x74a2faf22bd04a0f415ee2c83e875aac71798eceba4189ebf64709a253317ce0",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x74a2faf22bd04a0f415ee2c83e875aac71798eceba4189ebf64709a253317ce0"
+    },
+    {
+      "label": "observe_runbook",
+      "hash": "0xf902ce68968608fbcee45a84c51b590905d2888dba5c328252e3fba3d98b3f73",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xf902ce68968608fbcee45a84c51b590905d2888dba5c328252e3fba3d98b3f73"
+    },
+    {
+      "label": "observe_contract",
+      "hash": "0xda5bfc73ce66f7369b4702cfa644909eec32e4d2e5dc0c369d2f1dee27e0eff5",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xda5bfc73ce66f7369b4702cfa644909eec32e4d2e5dc0c369d2f1dee27e0eff5"
+    },
+    {
+      "label": "seal_drill",
+      "hash": "0xde5e9de4b3a61a2246766f8e5d4335355c5e9b841c1fed927f630f98ce021884",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xde5e9de4b3a61a2246766f8e5d4335355c5e9b841c1fed927f630f98ce021884"
+    },
+    {
+      "label": "audit_1",
+      "hash": "0xeb1782a45c0cff9375313674233e2e2c68d59dbc0e5a2f3b17c02e6b61fec863",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xeb1782a45c0cff9375313674233e2e2c68d59dbc0e5a2f3b17c02e6b61fec863"
+    },
+    {
+      "label": "terminal_replay_attempt",
+      "hash": "0x9734df541d629fcf156cd73e946d131012c1a49d9d1d10e8ee78de4086a6235a",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x9734df541d629fcf156cd73e946d131012c1a49d9d1d10e8ee78de4086a6235a"
+    }
+  ]
+}

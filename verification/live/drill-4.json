@@ -1,0 +1,340 @@
+{
+  "generated_at": "2026-10-13T02:19:09.556Z",
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "contract": "0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "contract_explorer_url": "https://explorer-studio.genlayer.com/address/0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "target_contract": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "wallets": {
+    "auxiliary_a": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+    "auxiliary_b": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5"
+  },
+  "source": {
+    "owner": "Azariavibecode",
+    "repo": "PauseRunbookRealityCheck",
+    "commit": "03865b5653d2a519747d6773dd06b152fe0a0c4d",
+    "path": "/fixtures/runbook/usdt-live.md",
+    "digest": "de5bac600bcdb72ae0577130011071d6569b77073ce4291323352609943d6185",
+    "marker": "## PARAMETERS"
+  },
+  "before": {
+    "certified_count": 1,
+    "drill_count": 4,
+    "hazard_count": 3,
+    "inconclusive_count": 0
+  },
+  "after": {
+    "certified_count": 1,
+    "drill_count": 5,
+    "hazard_count": 4,
+    "inconclusive_count": 0
+  },
+  "runbook_observation": {
+    "digest": "668872ca19644b369a9d750de1a48e7d8d2bc312a1163969fb4bb7c075ca7fba",
+    "section": "## PARAMETERS\nFor Ethereum deployment 0xdAC17F958D2ee523a2206206994597C13D831ec7, the owner calls pause(bytes32 incidentId) with a 32-byte incident identifier, then unpause(bytes32 incidentId) with that identifier to recover. Both methods require this argument.",
+    "status": "VERIFIED"
+  },
+  "contract_observation": {
+    "abi": [
+      {
+        "inputs": [],
+        "name": "name",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "deprecate",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address",
+          "uint256"
+        ],
+        "name": "approve",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "deprecated",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "addBlackList",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "address",
+          "uint256"
+        ],
+        "name": "transferFrom",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "upgradedAddress",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "balances",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "decimals",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "maximumFee",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "_totalSupply",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "unpause",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "getBlackListStatus",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "address"
+        ],
+        "name": "allowed",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "paused",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "balanceOf",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "pause",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "getOwner",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "uint256"
+        ],
+        "name": "transfer",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "uint256",
+          "uint256"
+        ],
+        "name": "setParams",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "uint256"
+        ],
+        "name": "issue",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "uint256"
+        ],
+        "name": "redeem",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address",
+          "address"
+        ],
+        "name": "allowance",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "basisPointsRate",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "isBlackListed",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "removeBlackList",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_UINT",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "transferOwnership",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "address"
+        ],
+        "name": "destroyBlackFunds",
+        "state_mutability": "nonpayable"
+      }
+    ],
+    "abi_digest": "f06190e058321391512a817c82597b63fcbf5ab23165dd158b8394514c7c8b96",
+    "source": "[omitted 14888 chars]",
+    "source_digest": "36bf0b5747dfe7f79a03c9bc09af63e93e352d3c61199fbf025fd2c962b485f8",
+    "status": "VERIFIED"
+  },
+  "drill": {
+    "chain_id": 1,
+    "contract_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+    "drill_id": 4,
+    "findings": {
+      "drill_id": 4,
+      "hazard_free": true,
+      "method_exists": true,
+      "parameters_match": false,
+      "reason_code": "PARAMETER_MISMATCH",
+      "recovery_described": true,
+      "scope_supported": true,
+      "verdict": "INTERFACE_MISMATCH"
+    },
+    "project": "public-emergency-drill",
+    "reason_code": "PARAMETER_MISMATCH",
+    "runbook_source": {
+      "commit": "03865b5653d2a519747d6773dd06b152fe0a0c4d",
+      "digest": "de5bac600bcdb72ae0577130011071d6569b77073ce4291323352609943d6185",
+      "marker": "## PARAMETERS",
+      "owner": "Azariavibecode",
+      "path": "/fixtures/runbook/usdt-live.md",
+      "repo": "PauseRunbookRealityCheck"
+    },
+    "state": "HAZARD_RECORDED",
+    "verdict": "INTERFACE_MISMATCH"
+  },
+  "transactions": [
+    {
+      "label": "create_drill",
+      "hash": "0xb700cd1551024e066b50df859853f90e65d1019bbf7cd6259f14aad8cded0848",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xb700cd1551024e066b50df859853f90e65d1019bbf7cd6259f14aad8cded0848"
+    },
+    {
+      "label": "observe_runbook",
+      "hash": "0xfad1d576e6e0f69b25afb17728fcdf895068583da7b7bb061341cbdfc23d560d",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xfad1d576e6e0f69b25afb17728fcdf895068583da7b7bb061341cbdfc23d560d"
+    },
+    {
+      "label": "observe_contract",
+      "hash": "0x970d0420c330471cc08187ad22c7d5f482b5ea5c8140950d21b378dd574355f7",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x970d0420c330471cc08187ad22c7d5f482b5ea5c8140950d21b378dd574355f7"
+    },
+    {
+      "label": "seal_drill",
+      "hash": "0x4b7d00363e40a3f41e4630d89cd71675f8572cb1577bb21ee142a284d7c8251b",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x4b7d00363e40a3f41e4630d89cd71675f8572cb1577bb21ee142a284d7c8251b"
+    },
+    {
+      "label": "audit_1",
+      "hash": "0x5f3ac7c804828c0867af3601bf03b6f0ce1c4f53155c5673c71ba023910e124f",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_DISAGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x5f3ac7c804828c0867af3601bf03b6f0ce1c4f53155c5673c71ba023910e124f"
+    },
+    {
+      "label": "audit_2",
+      "hash": "0xdda77579e06d8571848fc4696d15404e6d4843b57bceb91c10c83ceabfd99cc8",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_DISAGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xdda77579e06d8571848fc4696d15404e6d4843b57bceb91c10c83ceabfd99cc8"
+    },
+    {
+      "label": "audit_3",
+      "hash": "0x310c040f2cefb291b9941711191ac7516684ca5e32d2f825475beac6a3a46a7a",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x310c040f2cefb291b9941711191ac7516684ca5e32d2f825475beac6a3a46a7a"
+    },
+    {
+      "label": "terminal_replay_attempt",
+      "hash": "0xfa9e069288e73dc049e386bb498bbb4da890fb68786640cba4ea7caeddfc8b9b",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xfa9e069288e73dc049e386bb498bbb4da890fb68786640cba4ea7caeddfc8b9b"
+    }
+  ]
+}

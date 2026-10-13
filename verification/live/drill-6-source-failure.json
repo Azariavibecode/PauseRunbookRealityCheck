@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-10-13T02:28:24.986Z",
+  "network": "StudioNet",
+  "contract": "0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "drill_id": 6,
+  "expected": "SOURCE_UNVERIFIED and OBSERVATIONS_INCOMPLETE",
+  "before": {
+    "certified_count": 1,
+    "drill_count": 6,
+    "hazard_count": 4,
+    "inconclusive_count": 1
+  },
+  "after": {
+    "certified_count": 1,
+    "drill_count": 7,
+    "hazard_count": 4,
+    "inconclusive_count": 1
+  },
+  "observation": {
+    "error": "OBSERVATION_NOT_FOUND"
+  },
+  "drill": {
+    "chain_id": 1,
+    "contract_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+    "drill_id": 6,
+    "project": "bad-digest-control",
+    "reason_code": "",
+    "runbook_source": {
+      "commit": "03865b5653d2a519747d6773dd06b152fe0a0c4d",
+      "digest": "0000000000000000000000000000000000000000000000000000000000000000",
+      "marker": "## HAPPY",
+      "owner": "Azariavibecode",
+      "path": "/fixtures/runbook/usdt-live.md",
+      "repo": "PauseRunbookRealityCheck"
+    },
+    "state": "OPEN",
+    "verdict": "PENDING"
+  },
+  "transactions": [
+    {
+      "function": "create_drill",
+      "hash": "0xfa8a13f484d881c0c4c4547d108f74dabdfc0f793b82c118f72243e9f4fd19f2",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xfa8a13f484d881c0c4c4547d108f74dabdfc0f793b82c118f72243e9f4fd19f2"
+    },
+    {
+      "function": "observe_runbook",
+      "hash": "0x6d5df110b37e8d8b98cb6b5418c7788d7d2fdf30b5a388bc7e6ac0fc39f70086",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x6d5df110b37e8d8b98cb6b5418c7788d7d2fdf30b5a388bc7e6ac0fc39f70086"
+    },
+    {
+      "function": "seal_drill",
+      "hash": "0x435353a71aaa63183548e01922b235b905225dfd27380db8547956ccac844486",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x435353a71aaa63183548e01922b235b905225dfd27380db8547956ccac844486"
+    }
+  ]
+}
