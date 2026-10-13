@@ -2,7 +2,7 @@ import { createClient } from "genlayer-js";
 import { studionet } from "genlayer-js/chains";
 import { TransactionStatus } from "genlayer-js/types";
 import { privateKeyToAccount } from "viem/accounts";
-import { writeFileSync } from "node:fs";
+import { writeFileSync, mkdirSync } from "node:fs";
 
 
 const required = [
@@ -19,6 +19,7 @@ if (!/^[0-9a-fA-F]{40}$/.test(process.env.RUNBOOK_COMMIT) || !/^[0-9a-fA-F]{64}$
 const contract = process.env.CONTRACT_ADDRESS;
 const target = process.env.TARGET_CONTRACT_ADDRESS;
 const wallets = keys.map((key) => privateKeyToAccount(key.startsWith("0x") ? key : `0x${key}`));
+if (wallets[0].address.toLowerCase() === wallets[1].address.toLowerCase()) throw new Error("Auxiliary wallets must differ");
 const reader = createClient({ chain: studionet });
 const writer = (wallet) => createClient({ chain: studionet, account: wallet });
 const explorer = "https://explorer-studio.genlayer.com";
@@ -82,5 +83,6 @@ const report = {
   contract_observation: { ...contractObservation, source: `[omitted ${contractObservation.source.length} chars]` },
   drill: await parse("get_drill", [drillId]), transactions,
 };
-writeFileSync("verification/studionet-e2e.json", JSON.stringify(report, null, 2) + "\n");
+mkdirSync("verification/live", { recursive: true });
+writeFileSync(`verification/live/drill-${drillId}.json`, JSON.stringify(report, null, 2) + "\n");
 console.log(JSON.stringify(report, null, 2));
