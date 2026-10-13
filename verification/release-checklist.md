@@ -12,11 +12,11 @@
 
 ## Required before claiming live E2E
 
-- [ ] Choose a public verified Ethereum target and commit a matching public runbook.
-- [ ] Freeze the expected result and record the exact SHA-256 before validator execution.
-- [ ] Deploy only from the main wallet and record the Studio Explorer contract URL.
-- [ ] Run `npm run e2e:studionet` using two auxiliary wallets.
-- [ ] Inspect every finalized transaction and all contract readbacks.
-- [ ] Commit the generated `verification/studionet-e2e.json` intentionally as evidence.
+- [x] Choose a public verified Ethereum target and commit a public runbook.
+- [x] Freeze the expected negative-control result and record the exact SHA-256 before validator execution.
+- [x] Deploy only from the main wallet and record the Studio Explorer contract URL.
+- [x] Run `npm run e2e:studionet` using two auxiliary wallets.
+- [x] Inspect every finalized transaction and all contract readbacks.
+- [x] Commit the generated `verification/studionet-e2e.json` intentionally as evidence.
 
-The unchecked items are deliberately not represented as completed. Local mocks are not StudioNet evidence.
+Live execution on 2026-10-13 used ENS Registry as a frozen negative control. Its verified interface deliberately lacks the runbook methods. The expected and observed result was `INTERFACE_MISMATCH / METHOD_MISSING`; this is failure-path evidence, not a positive certificate claim. Local mocks remain distinct from StudioNet evidence.

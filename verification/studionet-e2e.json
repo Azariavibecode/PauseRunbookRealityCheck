@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-10-13T01:04:36.592Z",
+  "network": "StudioNet",
+  "chain_id": 61999,
+  "contract": "0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "contract_explorer_url": "https://explorer-studio.genlayer.com/address/0xc502654bB57dEAA37f106AfaE5260704a474846A",
+  "target_contract": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e",
+  "wallets": {
+    "auxiliary_a": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+    "auxiliary_b": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5"
+  },
+  "source": {
+    "owner": "Azariavibecode",
+    "repo": "PauseRunbookRealityCheck",
+    "commit": "b5a588d8d7a5925112000bc0ecc479e5645277d8",
+    "path": "/fixtures/runbook/executable.md",
+    "digest": "4562f46adeff891e950b43c7676dfc918682a22f0a70158a4244d34980a5d8dd",
+    "marker": "## DRILL WITHDRAWAL-PAUSE-001"
+  },
+  "before": {
+    "certified_count": 0,
+    "drill_count": 0,
+    "hazard_count": 0,
+    "inconclusive_count": 0
+  },
+  "after": {
+    "certified_count": 0,
+    "drill_count": 1,
+    "hazard_count": 1,
+    "inconclusive_count": 0
+  },
+  "runbook_observation": {
+    "digest": "3835a88b944f63171dd5aa58714a7540804f974e4ddf813e1e84ce9eedb74c9b",
+    "section": "## DRILL WITHDRAWAL-PAUSE-001\n\nOn Ethereum mainnet, call `pauseWithdrawals(bytes32 reason)` on the registered vault address. The `reason` argument records the incident identifier. This pauses withdrawals only; repayments remain available. After the incident is resolved, call `unpauseWithdrawals(bytes32 reason)` with the same incident identifier. Do not call the global emergency shutdown function.",
+    "status": "VERIFIED"
+  },
+  "contract_observation": {
+    "abi": [
+      {
+        "inputs": [
+          "address",
+          "address"
+        ],
+        "name": "isApprovedForAll",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [],
+        "name": "old",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "bytes32"
+        ],
+        "name": "owner",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "bytes32"
+        ],
+        "name": "recordExists",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "bytes32"
+        ],
+        "name": "resolver",
+        "state_mutability": "view"
+      },
+      {
+        "inputs": [
+          "address",
+          "bool"
+        ],
+        "name": "setApprovalForAll",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32",
+          "address"
+        ],
+        "name": "setOwner",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32",
+          "address",
+          "address",
+          "uint64"
+        ],
+        "name": "setRecord",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32",
+          "address"
+        ],
+        "name": "setResolver",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32",
+          "bytes32",
+          "address"
+        ],
+        "name": "setSubnodeOwner",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32",
+          "bytes32",
+          "address",
+          "address",
+          "uint64"
+        ],
+        "name": "setSubnodeRecord",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32",
+          "uint64"
+        ],
+        "name": "setTTL",
+        "state_mutability": "nonpayable"
+      },
+      {
+        "inputs": [
+          "bytes32"
+        ],
+        "name": "ttl",
+        "state_mutability": "view"
+      }
+    ],
+    "abi_digest": "7a1e704b48a44bed15b9721d14212953177327d67ba94807e6ab7b5928cec0a8",
+    "source": "[omitted 9501 chars]",
+    "source_digest": "d2c9c7732b291bddfa0ae2ec8f6a7ef4b3013369a155cbedd80d8dd41adf34f0",
+    "status": "VERIFIED"
+  },
+  "drill": {
+    "chain_id": 1,
+    "contract_address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+    "creator": "0x67a1a08fc4cf7d05c859d0d3d8398a3a30b1677e",
+    "drill_id": 0,
+    "findings": {
+      "drill_id": 0,
+      "hazard_free": false,
+      "method_exists": false,
+      "parameters_match": false,
+      "reason_code": "METHOD_MISSING",
+      "recovery_described": false,
+      "scope_supported": false,
+      "verdict": "INTERFACE_MISMATCH"
+    },
+    "project": "public-emergency-drill",
+    "reason_code": "METHOD_MISSING",
+    "runbook_source": {
+      "commit": "b5a588d8d7a5925112000bc0ecc479e5645277d8",
+      "digest": "4562f46adeff891e950b43c7676dfc918682a22f0a70158a4244d34980a5d8dd",
+      "marker": "## DRILL WITHDRAWAL-PAUSE-001",
+      "owner": "Azariavibecode",
+      "path": "/fixtures/runbook/executable.md",
+      "repo": "PauseRunbookRealityCheck"
+    },
+    "state": "HAZARD_RECORDED",
+    "verdict": "INTERFACE_MISMATCH"
+  },
+  "transactions": [
+    {
+      "label": "create_drill",
+      "hash": "0x622030c836ef61fa0c995cd35428446d7b7516ab6f50b4f68f1d785362e44bc1",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x622030c836ef61fa0c995cd35428446d7b7516ab6f50b4f68f1d785362e44bc1"
+    },
+    {
+      "label": "observe_runbook",
+      "hash": "0x85b2280c4b7493b2ae5ad9a32e2ff58e84e7296d883f74c34933fb840f9246a8",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x85b2280c4b7493b2ae5ad9a32e2ff58e84e7296d883f74c34933fb840f9246a8"
+    },
+    {
+      "label": "observe_contract",
+      "hash": "0xc2818c029a64e0af33f65d9ed7aec5ec21946e8be18e47f06c24e4f9cfa51c2f",
+      "actor": "0x67A1A08Fc4cf7D05c859d0d3D8398a3A30B1677e",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xc2818c029a64e0af33f65d9ed7aec5ec21946e8be18e47f06c24e4f9cfa51c2f"
+    },
+    {
+      "label": "seal_drill",
+      "hash": "0x36b54d3d6675387b1411da4890f3ea5d450a17562dd8b7d7b26176bf3afda008",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x36b54d3d6675387b1411da4890f3ea5d450a17562dd8b7d7b26176bf3afda008"
+    },
+    {
+      "label": "audit_1",
+      "hash": "0xc0912f11ba64ee4c3e2294d8f8c041d1e7d4da82f72453f49a1c989b6f742070",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0xc0912f11ba64ee4c3e2294d8f8c041d1e7d4da82f72453f49a1c989b6f742070"
+    },
+    {
+      "label": "terminal_replay_attempt",
+      "hash": "0x71659fb1a169cd84defe270dc6187b2b37e00b91708e159032349af8d4cb1e75",
+      "actor": "0x7C87B10a3d43F3b3551414401F8b26B9F662bAB5",
+      "status": "FINALIZED",
+      "result_name": "MAJORITY_AGREE",
+      "explorer_url": "https://explorer-studio.genlayer.com/transactions/0x71659fb1a169cd84defe270dc6187b2b37e00b91708e159032349af8d4cb1e75"
+    }
+  ]
+}
